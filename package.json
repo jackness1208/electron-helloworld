@@ -1,0 +1,31 @@
+{
+  "name": "electron-helloworld",
+  "version": "0.1.0",
+  "description": "demo 4 electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackness1208/electron-helloworld.git"
+  },
+  "keywords": [
+    "electron",
+    "demo"
+  ],
+  "author": "jackness",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackness1208/electron-helloworld/issues"
+  },
+  "homepage": "https://github.com/jackness1208/electron-helloworld",
+  "devDependencies": {
+    "electron-packager": "^5.0.1",
+    "electron-prebuilt": "^0.30.3"
+  },
+  "dependencies": {
+    "nconf": "^0.7.2"
+  }
+}
