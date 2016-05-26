@@ -23,13 +23,13 @@
   "homepage": "https://github.com/jackness1208/electron-helloworld",
   "devDependencies": {
     "electron-connect": "^0.4.2",
-    "electron-packager": "^5.0.1",
     "electron-prebuilt": "^0.30.3",
     "gulp-atom-electron": "^1.6.1",
     "gulp-symdest": "^1.0.0",
     "gulp-vinyl-zip": "^1.2.2"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "electron-packager": "^5.0.1"
   }
 }
