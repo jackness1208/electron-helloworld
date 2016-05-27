@@ -31,7 +31,6 @@
     "gulp-vinyl-zip": "^1.2.2"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
-    "electron-packager": "^5.0.1"
+    "gulp": "^3.9.1"
   }
 }
