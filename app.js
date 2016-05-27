@@ -10,8 +10,6 @@ var
     submenu = null,
     ipc = electron.ipcMain;
 
-console.log(ipc)
-
 app.on('ready', function(){
     mainWindow = new BrowserWindow({
         resizable: false,

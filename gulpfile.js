@@ -49,7 +49,7 @@ gulp.task('pack', function(){
         pkg = require('./package.json'),
         iconPath = '',
         opts = {
-            version: '0.30.3',
+            version: '1.2.0',
             // winIcon: path.join(__dirname, 'app/icon/app-icon.ico'),
             // darwinIcon: './app/icon/app-icon.icns',
             platform: 'darwin'
