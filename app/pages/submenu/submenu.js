@@ -1,10 +1,10 @@
 (function(){
     var 
-        ipc = require('ipc'),
+        ipcRenderer = require('electron').ipcRenderer,
         closeEl = document.querySelector('.d-close');
 
     closeEl.addEventListener('click', function(){
-        ipc.send('close-submenu');
+        ipcRenderer.send('close-submenu');
     });
 
 })();

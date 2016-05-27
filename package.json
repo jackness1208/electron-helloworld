@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack:pc": "electron-packager . electron-helloworld --all --version=0.1.0 --out=./build --overwrite --icon=./app/icon/app-logo.icns"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
   "homepage": "https://github.com/jackness1208/electron-helloworld",
   "devDependencies": {
     "electron-connect": "^0.4.2",
-    "electron-prebuilt": "^0.30.3",
+    "electron-prebuilt": "^1.2.0",
     "gulp-atom-electron": "^1.6.1",
     "gulp-symdest": "^1.0.0",
     "gulp-vinyl-zip": "^1.2.2"

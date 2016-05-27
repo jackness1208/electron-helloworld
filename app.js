@@ -1,13 +1,16 @@
 
 // 'use strict';
 var
-    app = require('app'),
-    BrowserWindow = require('browser-window'),
-    globalShortcut = require('global-shortcut'),
+    electron = require('electron'),
     client = require('electron-connect').client,
+    app = electron.app,
+    BrowserWindow = electron.BrowserWindow,
+    globalShortcut = electron.globalShortcut,
     mainWindow = null,
     submenu = null,
-    ipc = require('ipc');
+    ipc = electron.ipcMain;
+
+console.log(ipc)
 
 app.on('ready', function(){
     mainWindow = new BrowserWindow({
@@ -17,17 +20,18 @@ app.on('ready', function(){
         height: 600
     });
 
-    mainWindow.loadUrl('file://' + __dirname + '/app/pages/index/index.html');
+    mainWindow.loadURL('file://' + __dirname + '/app/pages/index/index.html');
 
-    globalShortcut.register('q', function(){
+    globalShortcut.register('f4', function(){
         mainWindow.webContents.send('global-shortcut', 0);
 
     });
 
-    client.create(mainWindow);
+    // client.create(mainWindow);
 });
 
 ipc.on('close-main-window', function(){
+    console.log('===', 'close-main-window')
     app.quit();
 });
 
@@ -42,7 +46,7 @@ ipc.on('open-submenu', function(){
         resizable: false
     });
 
-    submenu.loadUrl('file://' + __dirname + '/app/pages/submenu/submenu.html');
+    submenu.loadURL('file://' + __dirname + '/app/pages/submenu/submenu.html');
 
 
     submenu.on('closed', function(){
