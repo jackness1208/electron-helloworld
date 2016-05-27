@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jackness1208/electron-helloworld",
   "devDependencies": {
     "electron-connect": "^0.4.2",
+    "electron-packager": "^5.2.1",
     "electron-prebuilt": "^1.2.0",
     "gulp-atom-electron": "^1.6.1",
     "gulp-symdest": "^1.0.0",
