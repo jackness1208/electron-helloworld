@@ -34,7 +34,8 @@ gulp.task('start', function(){
     connect.start();
 
     gulp.watch('app.js', connect.restart);
-    gulp.watch(['app/**/*.*'], connect.reload);
+    // gulp.watch(['app/**/*.*'], connect.reload);
+    gulp.watch(['app/**/*.*'], connect.restart);
     // gulp.watch(['app/pages/index/index.html'], electron.reload);
 });
 

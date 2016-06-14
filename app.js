@@ -12,10 +12,11 @@ var
 
 app.on('ready', function(){
     mainWindow = new BrowserWindow({
-        resizable: false,
+        // resizable: false,
         frame: false,
         width: 800, 
-        height: 600
+        height: 600,
+        titleBarStyle: 'hidden'
     });
 
     mainWindow.loadURL('file://' + __dirname + '/app/pages/index/index.html');
