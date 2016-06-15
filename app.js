@@ -4,6 +4,7 @@ var
     electron = require('electron'),
     client = require('electron-connect').client,
     app = electron.app,
+    path = require('path'),
     BrowserWindow = electron.BrowserWindow,
     globalShortcut = electron.globalShortcut,
     mainWindow = null,
@@ -12,7 +13,7 @@ var
 
 app.on('ready', function(){
     mainWindow = new BrowserWindow({
-        // resizable: false,
+        resizable: false,
         frame: false,
         width: 800, 
         height: 600,
