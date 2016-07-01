@@ -34,15 +34,11 @@ gulp.task('start', function(){
     connect.start();
 
     gulp.watch('app.js', connect.restart);
-    // gulp.watch(['app/**/*.*'], connect.reload);
     gulp.watch(['app/**/*.*'], connect.restart);
-    // gulp.watch(['app/pages/index/index.html'], electron.reload);
 });
 
 gulp.task('pack', function(){
-    // return gulp.src('**')
-    //     .pipe(electron({ version: '0.34.1', platform: 'darwin' }))
-    //     .pipe(zip.dest('app-darwin.zip'));
+    
 
     var 
         system = process.argv[4],
@@ -56,7 +52,7 @@ gulp.task('pack', function(){
             platform: 'darwin'
         };
 
-    switch(system){
+    switch(gulp.env.system){
         case 'windows':
         case 'pc':
             opts.platform = 'win32';
@@ -73,12 +69,8 @@ gulp.task('pack', function(){
             return;
     }
 
-    return gulp.src(['**', '!build/**'])
+    return gulp.src(['**', '!build/**', '!tool/**'])
         .pipe(electron(opts))
         .pipe(zip.dest('./build/'+ pkg.name +'.'+ pkg.version + '.' + opts.platform + '.zip'));
-
-    // return gulp.src('**')
-    //     .pipe(electron(opts))
-    //     .pipe(zip.dest('./build/'+ pkg.name +'.'+ pkg.version +'.zip'));
 
 });
