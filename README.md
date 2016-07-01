@@ -10,7 +10,7 @@ $ npm install
 
 ## 运行
 ```
-gulp start
+$ gulp start
 ```
 
 ## 打包
@@ -18,10 +18,8 @@ gulp start
 
 1. 程序打包
 ```
-/**
- * @param {String} platform 打包的平台 pc|mac|linux
- */
-gulp pack --system <platform>
+$ gulp pack --system <platform>
+# @param {String} platform 打包的平台 pc|mac|linux
 ```
 
 2. 图标更换
