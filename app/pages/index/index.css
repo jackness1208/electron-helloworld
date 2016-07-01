@@ -1,4 +1,15 @@
 @charset "utf-8";
+.d-drag {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 100px;
+    height: 50px;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+
+}
 .d-dialog {
     position: fixed;
     left: 0;
@@ -23,6 +34,7 @@
 }
 .d-close {
     position: absolute;
+    z-index: 2;
     right: 10px;
     top: 10px;
     width: 30px;
@@ -56,6 +68,7 @@
 }
 .d-menu {
     position: absolute;
+    z-index: 2;
     right: 60px;
     top: 10px;
     width: 30px;
